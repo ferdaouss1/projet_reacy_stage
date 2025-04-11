@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const Vente = () => {
   const [ventes, setVentes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  
   const [newVente, setNewVente] = useState({
     zone: '',
     lot: '',

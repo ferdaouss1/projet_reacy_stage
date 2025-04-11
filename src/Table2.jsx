@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const Table2 = () => {
   const [ventes, setVentes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  
   const [newVente, setNewVente] = useState({
     reference: '',
     solde: '',
