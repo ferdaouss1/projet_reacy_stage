@@ -1,5 +1,6 @@
 // src/App.js
 import Table from './Table.jsx'
+import Table2 from './Table2.jsx'
 import React from 'react';
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         Explorez les meilleures offres de voyages et de produits liés au tourisme. Réservez maintenant et commencez votre aventure !
       </p>
       <Table />
+        <h2>TP2</h2>
+      <Table2 />
     
     </div>
   );
