@@ -1,0 +1,30 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #0d6efd; /* أزرق بحال Bootstrap */
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menu-btn:hover {
+    color: #ffc107; /* لون أصفر عند التحويم */
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  

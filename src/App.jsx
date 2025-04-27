@@ -1,23 +1,34 @@
-// src/App.js
-import Table from './Table.jsx'
-import Table2 from './Table2.jsx'
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Dashboard from './pages/Dashboard';
+import Vente from './pages/Vente';
+import AvanceDetail from './pages/AvanceDetail';
+import Achat from './pages/Achat';
+import LivreDeCaisse from './pages/LivreDeCaisse';
+import Stock from './pages/Stock';
+
+import './App.css';
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        Bienvenue sur notre plateforme de voyage ✈
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-center max-w-xl">
-        Explorez les meilleures offres de voyages et de produits liés au tourisme. Réservez maintenant et commencez votre aventure !
-      </p>
-      <Table />
-        <h2>TP2</h2>
-      <Table2 />
-    
-    </div>
+    <Router>
+      <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/vente" element={<Vente />} />
+            <Route path="/avance-detail" element={<AvanceDetail />} />
+            <Route path="/achat" element={<Achat />} />
+            <Route path="/livre-de-caisse" element={<LivreDeCaisse />} />
+            <Route path="/stock" element={<Stock />} />
+          </Routes>
+        </div>
+      </Layout>
+    </Router>
   );
 }
 
-export default App;
+export default App;
